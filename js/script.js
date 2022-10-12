@@ -1,27 +1,37 @@
 // console.log("i");
 
-// const options = {
-//     method: "GET",
-//     headers: "X-Fungenerators-Api-Secret";
-    
-// }
-const url = "https://api.publicapis.org/entries";
+//const url = "https://api.publicapis.org/entries"; API with no authentication, links to a lot of different apis.
+
+const options = {
+    method: "GET",
+    headers: {
+        "x-api-key": "live_GqNMBqU0JDhtsGrfh0aCydwIb9LtegmerXbVQA8nKDxXFZDYIYMJWmcZX4jESb1R",
+    },
+};
+
+const url = "https://api.thedogapi.com/v1/breeds";
+
+const resultsContainer = document.querySelector(".results");
 
 async function callApi() {
-
     const response = await fetch(url);
     const json = await response.json();
+    console.log(json);
 
-    // results = json.entries;
-    console.log(json.entries);
+    setTimeout(function () {
+        resultsContainer.innerHTML = "";
 
-    
-
-    for(let i = 0; i < json.entries.length; i++) {
-        console.log(json.entries[i].API);
-        console.log(json.entries[i].Description);
-        console.log(json.entries[i].Link);
-    };
+        for (let i = 0; i < json.length; i++) {
+            resultsContainer.innerHTML += `<div class="card">
+                                                <h3>${json[i].name}</h3>
+                                                <li><b>Life span: </b>${json[i].life_span}</li>
+                                                <li><b>Temperament: </b>${json[i].temperament}</li>
+                                                <div>
+                                                    <img src="${json[i].image.url}" alt="${json[i].name}" />
+                                                </div>
+                                            </div>`;
+        }
+    }, 2000);
 }
 
 callApi();
