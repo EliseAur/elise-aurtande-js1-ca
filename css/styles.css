@@ -1,13 +1,12 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
-    max-width: 1500px;
     margin: auto;
 }
 
 h1,
 h2 {
-    margin-left: 20px;
+    margin: 10px;
 }
 
 h3 {
@@ -15,20 +14,57 @@ h3 {
     margin: 0 0 10px 0;
 }
 
+a {
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #d6ebd6;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2c5f2c;
+}
+
+.current {
+    text-decoration: underline;
+}
+
 .results {
     display: flex;
     flex-wrap: wrap;
+    max-width: 420px;
+    margin: auto;
 }
 
 .card {
-    background: white;
-    border: 4px solid green;
-    border-radius: 1rem;
+    background-color: #00800029;
+    box-shadow: 3px 3px 3px #0000003d;
+    border-radius: 10px;
     margin: 10px;
     padding: 20px;
-    list-style: none; /*elise*/
+    list-style: none;
     max-width: 400px;
     box-sizing: border-box;
+}
+
+.card-one {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+
+nav {
+    margin-top: 30px;
+    max-width: 100%;
+    padding: 20px;
+    background: #2c5f2c;
+    margin-bottom: 20px;
 }
 
 .card img {
@@ -41,12 +77,12 @@ h3 {
 
 .loader {
     border: 13px solid rgba(222, 222, 222, 0.5);
-    border-top: 13px solid green;
+    border-top: 13px solid #2c5f2c;
     border-radius: 100%;
     width: 60px;
     height: 60px;
     animation: spin 2s linear infinite;
-    margin: 20px;
+    margin: 40px auto;
 }
 
 @keyframes spin {
@@ -55,5 +91,17 @@ h3 {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 841px) {
+    .results {
+        max-width: 840px;
+    }
+}
+
+@media (min-width: 1261px) {
+    .results {
+        max-width: 1260px;
     }
 }
