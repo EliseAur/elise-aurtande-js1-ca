@@ -1,3 +1,9 @@
+const resultsContainer = document.querySelector(".container");
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
+console.log(id);
+
 const options = {
     method: "GET",
     headers: {
@@ -5,9 +11,7 @@ const options = {
     },
 };
 
-const url = "https://api.thedogapi.com/v1/breeds/1";
-
-const resultsContainer = document.querySelector(".container");
+const url = "https://api.thedogapi.com/v1/breeds/" + id;
 
 async function getDetails() {
     const response = await fetch(url);
@@ -22,7 +26,7 @@ async function getDetails() {
                                                 <li><b>Life span: </b>${details.life_span}</li>
                                                 <li><b>Temperament: </b>${details.temperament}</li>
                                                 <div>
-                                                    <img src="${details.image.url}" alt="${details.name}" />
+                                                    <img src="${details.reference_image_id}" alt="${details.name}" />
                                                 </div>
                                             </div>`;
     }, 2000);
