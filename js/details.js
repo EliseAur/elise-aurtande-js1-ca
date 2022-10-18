@@ -23,14 +23,17 @@ async function getDetails() {
 
         const image = details.reference_image_id;
 
-        resultsContainer.innerHTML = `<div class="card">
-                                                <h3>${details.name}</h3>
-                                                <li><b>Life span: </b>${details.life_span}</li>
-                                                <li><b>Temperament: </b>${details.temperament}</li>
-                                                <div>
-                                                    <img src="https://cdn2.thedogapi.com/images/${details.reference_image_id}.jpg" alt="${details.name}" />
-                                                </div>
-                                            </div>`;
+        resultsContainer.innerHTML = `<div class="card card-details">
+                                            <h2>${details.name}</h2>
+                                            <li><b>Bred for: </b>${details.bred_for}</li>
+                                            <li><b>Life span: </b>${details.life_span}</li>
+                                            <li><b>Height: </b>${details.height.metric}</li>
+                                            <li><b>Origin: </b>${details.origin}</li>
+                                            <li><b>Temperament: </b>${details.temperament}</li>
+                                            <div>
+                                                <img src="https://cdn2.thedogapi.com/images/${details.reference_image_id}.jpg" alt="${details.name}" />
+                                            </div> 
+                                        </div>`;
     }, 2000);
 }
 

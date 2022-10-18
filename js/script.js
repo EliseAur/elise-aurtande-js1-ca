@@ -24,11 +24,10 @@ async function callApi() {
         for (let i = 0; i < json.length; i++) {
             resultsContainer.innerHTML += `<a href="details.html?id=${json[i].id}"class="card">
                                                 <h3>${json[i].name}</h3>
-                                                <li><b>Life span: </b>${json[i].life_span}</li>
-                                                <li><b>Temperament: </b>${json[i].temperament}</li>
-                                                <div>
-                                                    <img src="${json[i].image.url}" alt="${json[i].name}" />
-                                                </div>
+                                                <li><b>Bred for: </b>${json[i].bred_for}</li>
+                                                
+                                                <div class="image" 
+                                                    style="background-image: url('${json[i].image.url}')")></div>
                                             </a>`;
         }
     }, 2000);
