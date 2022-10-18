@@ -18,7 +18,7 @@ h3,
 /* Navigation and menu */
 
 .menu {
-    background-color: #00800029;
+    background-color: #00800017;
     max-width: 100%;
     text-align: center;
     padding-top: 20px;
@@ -39,7 +39,7 @@ nav a {
     padding: 8px 40px;
     border-radius: 5px;
     text-decoration: none;
-    background-color: #d6ebd6;
+    background-color: #e8f4e8;
 }
 
 nav a:hover {
@@ -66,7 +66,7 @@ nav a:hover {
 }
 
 .card {
-    background-color: #00800029;
+    background-color: #00800017;
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
@@ -104,6 +104,7 @@ nav a:hover {
     border: 0;
 }
 
+/* Loader */
 .loader {
     border: 13px solid rgba(222, 222, 222, 0.5);
     border-top: 13px solid #2c5f2c;
@@ -122,6 +123,8 @@ nav a:hover {
         transform: rotate(360deg);
     }
 }
+
+/* Media */
 
 @media (min-width: 841px) {
     .results {
