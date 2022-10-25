@@ -31,7 +31,7 @@ nav {
     background: #749e83;
 }
 
-nav a {
+nav a, button {
     color: black;
     font-weight: bold;
     display: inline-block;
@@ -104,6 +104,8 @@ nav a:hover {
     border: 0;
 }
 
+/*Contact page */
+
 form {
     padding: 2em;
     border-radius: 10px;
@@ -111,14 +113,43 @@ form {
     box-sizing: border-box;
 }
 
-form div {
-    margin: 10px;
+label {
+    font-weight: bolder;
+    font-size: 0.88em;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    
 }
 
 input {
     display: block;
     width: 100%;
     padding: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+    border-radius: 6px;
+    border:0.1rem solid grey;
+}
+
+input:focus {
+    border: 0.12rem solid black;
+    outline:none;
+}
+
+/* .form-error {
+    display: none;
+} */
+
+button {
+    color: white;
+    background: black;
+    font-size: 1.2rem;
+    margin-left: 0;
+    padding: 12px 50px;
+    border-radius: 8px;
+    border: 0;
 }
 
 /* Loader */
