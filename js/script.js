@@ -9,7 +9,7 @@ const options = {
     },
 };
 
-const url = "https://api.thedogapi.com/v1/breeds";
+const url = "https://api.thedogapi.com/v1/breeds/";
 
 const resultsContainer = document.querySelector(".results");
 
@@ -31,7 +31,7 @@ async function callApi() {
                                                         style="background-image: url('${json[i].image.url}')")></div>
                                                 </a>`;
             }
-        }, 2500);
+        }, 3000);
     } catch(error) {
         setTimeout(function () {
             console.log("Error when calling the API:", error);
@@ -41,6 +41,4 @@ async function callApi() {
     }
     }
     
-
-
 callApi();
