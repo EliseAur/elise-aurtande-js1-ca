@@ -31,20 +31,21 @@ nav {
     background: #749e83;
 }
 
-nav a, button {
-    color: black;
+nav a, button, .errorMes a {
+    color: white;
+    background: black;
     font-weight: bold;
     display: inline-block;
     margin: 5px;
     padding: 8px 40px;
     border-radius: 5px;
     text-decoration: none;
-    background-color: #e8f4e8;
+    /* background-color: #e8f4e8; */
 }
 
 nav a:hover {
-    color: white;
-    background: black;
+    color: black;
+    background: white;
 }
 
 .current {
@@ -67,6 +68,7 @@ nav a:hover {
 
 .card {
     background-color: #00800017;
+    border: 4px solid #00800000;
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
@@ -113,7 +115,11 @@ form {
     box-sizing: border-box;
 }
 
-label {
+form h3 {
+    font-size: 1.2em;
+}
+
+label, .form-error {
     font-weight: bolder;
     font-size: 0.88em;
 }
@@ -138,9 +144,10 @@ input:focus {
     outline:none;
 }
 
-/* .form-error {
-    display: none;
-} */
+.form-error {
+    /* display: none; */
+    color: red;
+}
 
 button {
     color: white;
@@ -149,13 +156,48 @@ button {
     margin-left: 0;
     padding: 12px 50px;
     border-radius: 8px;
-    border: 0;
+    border: 0.2rem solid black;
+}
+
+button:hover {
+    color: black;
+    background: white;
+}
+
+/* error message home-page */
+
+.errorMes {
+    font-weight: bold;
+    display: block;
+    color: red;
+    background-color: #80000008;
+    border: 0.2rem solid red;
+}
+
+.errorMes h2 {
+    margin-left: 0;
+}
+
+.errorMes a {
+    background: red;
+    color: white;
+    margin: 15px 0 15px 0;
+    border: 0.2rem solid red;
+}
+
+.errorMes a:hover {
+    background: white;
+    color: red;
+}
+
+.errorMes:hover {
+    border: 0.2rem solid red;
 }
 
 /* Loader */
 .loader {
     border: 13px solid rgba(222, 222, 222, 0.5);
-    border-top: 13px solid #2c5f2c;
+    border-top: 13px solid #749e83;
     border-radius: 100%;
     width: 60px;
     height: 60px;
