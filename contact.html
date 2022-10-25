@@ -15,18 +15,43 @@
                 <a href="contact.html" class="current">Contact</a>
             </nav>
         </div>
-        <main>
-            <form>
+        <main class="container">
+            <form class="card-details">
                 <div>
                     <label>
-                        First name (required)
+                        Name (required)
+                        <input name="name" id="name"/>
+                    </label>
+                    <div class="form-error" id="name-error">Please enter your name </div>
+                </div>
+
+                <div>
+                    <label>
+                        Subject (required)
                         <input name="firstName" id="firstName"/>
                     </label>
                     <div class="form-error" id="firstName-error">Please enter your first name </div>
                 </div>
+
+                <div>
+                    <label>
+                        E-mail (required)
+                        <input name="firstName" id="firstName"/>
+                    </label>
+                    <div class="form-error" id="firstName-error">Please enter your first name </div>
+                </div>
+
+                <div>
+                    <label>
+                        Address (required)
+                        <input name="firstName" id="firstName"/>
+                    </label>
+                    <div class="form-error" id="firstName-error">Please enter your first name </div>
+                </div>
+                <button>Submit</button>
             </form>
         </main>
         
-        <script src="/js/details.js"></script>
+        
     </body>
 </html>

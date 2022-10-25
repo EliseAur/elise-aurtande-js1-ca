@@ -104,6 +104,17 @@ nav a:hover {
     border: 0;
 }
 
+form {
+    padding: 2em;
+    border-radius: 10px;
+    background-color: #00800017;
+    box-sizing: border-box;
+}
+
+input {
+    display: block;
+}
+
 /* Loader */
 .loader {
     border: 13px solid rgba(222, 222, 222, 0.5);
