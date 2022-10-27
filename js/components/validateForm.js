@@ -46,7 +46,7 @@ function validateForm(event) {
     // Form is valid - success message
     if(checkLength(fullName.value, 0) && checkLength(subject.value, 9) && validateEmail(email.value) && checkLength(adress.value, 24)) {
         form.style.border = "4px solid #749e83";
-        formIsValid.innerHTML += `<h2 style ="color: #415b4a">Your message was sent!</h2>
+        formIsValid.innerHTML = `<h2 style ="color: #415b4a">Your message was sent!</h2>
                                     <h3 style ="color: #415b4a">We will answer your request in a few days</h3>`;
         button.setAttribute("style", "border: 0.2rem solid #749e83; color: white; background: #749e83");
         formHeader.forEach(item => item.style.display = "none");
