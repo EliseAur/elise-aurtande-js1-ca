@@ -1,3 +1,4 @@
+//Form elements
 const form = document.querySelector("#contact-form");
 const fullName = document.querySelector("#name");
 const nameError = document.querySelector("#name-error");
@@ -7,7 +8,13 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#email-error");
 const adress = document.querySelector("#adress");
 const adressError = document.querySelector("#adress-error");
+
+//Form elements changed when submit
+const button = document.querySelector("button");
 const formIsValid = document.querySelector(".formIsValid");
+const formHeader = document.querySelectorAll(".form-header");
+const input = document.querySelectorAll("input");
+
 
 function validateForm(event) {
     event.preventDefault();
@@ -36,10 +43,15 @@ function validateForm(event) {
         adressError.style.display = "block";
     }
 
-    // if(checkLength === true && validateEmail ===true) {
-    //     form.style.borderColor = "4px solid #749e83";
-    //     form.innerHTML = `<p style ="color: green">Thank you for contacting us. We will answer your request in a few days</p>` + form.innerHTML;
-    // }
+    // Form is valid - success message
+    if(checkLength(fullName.value, 0) && checkLength(subject.value, 9) && validateEmail(email.value) && checkLength(adress.value, 24)) {
+        form.style.border = "4px solid #749e83";
+        formIsValid.innerHTML += `<h2 style ="color: #415b4a">Your message was sent!</h2>
+                                    <h3 style ="color: #415b4a">We will answer your request in a few days</h3>`;
+        button.setAttribute("style", "border: 0.2rem solid #749e83; color: white; background: #749e83");
+        formHeader.forEach(item => item.style.display = "none");
+        input.forEach(item => item.style.border = "none");
+    }
 }
 
 form.addEventListener("submit", validateForm);
