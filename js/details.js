@@ -13,6 +13,7 @@ const options = {
 
 const url = "https://api.thedogapi.com/v1/breeds/" + id;
 
+
 async function getDetails() {
     try {
         const response = await fetch(url);
@@ -23,6 +24,8 @@ async function getDetails() {
             resultsContainer.innerHTML = "";
     
             const image = details.reference_image_id;
+
+            document.title = `Dog Breeds | ${details.name}`;
     
             resultsContainer.innerHTML = `<div class="card card-details">
                                                 <h2>${details.name}</h2>

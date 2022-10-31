@@ -1,4 +1,4 @@
-//Form elements
+// Form elements
 const form = document.querySelector("#contact-form");
 const fullName = document.querySelector("#name");
 const nameError = document.querySelector("#name-error");
@@ -9,16 +9,18 @@ const emailError = document.querySelector("#email-error");
 const adress = document.querySelector("#adress");
 const adressError = document.querySelector("#adress-error");
 
-//Form elements changed when submit
+// Form elements changed when submit
 const button = document.querySelector("button");
 const formIsValid = document.querySelector(".formIsValid");
 const formHeader = document.querySelectorAll(".form-header");
 const input = document.querySelectorAll("input");
 
 
+// Validate form
 function validateForm(event) {
     event.preventDefault();
 
+    // Check input values
     if(checkLength(fullName.value, 0) === true) {
         nameError.style.display = "none";
     } else {
@@ -43,7 +45,7 @@ function validateForm(event) {
         adressError.style.display = "block";
     }
 
-    // Form is valid - success message
+    // Form is valid -> success message
     if(checkLength(fullName.value, 0) && checkLength(subject.value, 9) && validateEmail(email.value) && checkLength(adress.value, 24)) {
         form.style.border = "4px solid #749e83";
         formIsValid.innerHTML = `<h2 style ="color: #415b4a">Your message was sent!</h2>
@@ -70,6 +72,5 @@ function validateEmail(email) {
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
-
 
 

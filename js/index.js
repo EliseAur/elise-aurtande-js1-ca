@@ -1,7 +1,3 @@
-// console.log("i");
-
-//const url = "https://api.publicapis.org/entries"; API with no authentication, links to a lot of different apis.
-
 const options = {
     method: "GET",
     headers: {
@@ -26,12 +22,11 @@ async function callApi() {
                 resultsContainer.innerHTML += `<a href="details.html?id=${json[i].id}"class="card">
                                                     <h3>${json[i].name}</h3>
                                                     <li><b>Bred for: </b>${json[i].bred_for}</li>
-                                                    
-                                                    <div class="image" 
-                                                        style="background-image: url('${json[i].image.url}')")></div>
+                                                    <div class="image" style="background-image: url('${json[i].image.url}')")></div>
                                                 </a>`;
             }
         }, 3000);
+
     } catch(error) {
         setTimeout(function () {
             console.log("Error when calling the API:", error);
@@ -39,6 +34,6 @@ async function callApi() {
             resultsContainer.innerHTML += displayError("An error occoured when loading the list of dogs");
         }, 1500);
     }
-    }
+}
     
 callApi();
