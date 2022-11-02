@@ -45,7 +45,6 @@ nav a, button, .errorMes a {
     padding: 8px 40px;
     border-radius: 5px;
     text-decoration: none;
-    /* background-color: #e8f4e8; */
 }
 
 nav a:hover {
@@ -53,12 +52,10 @@ nav a:hover {
     background: white;
 }
 
-.current {
-    text-decoration: underline;
-}
-
 .footer {
-    height: 50px;
+    height: 40px;
+    background: #749e83;
+    margin-top: 20px;
 }
 
 /*Home*/
@@ -175,7 +172,7 @@ button:hover {
     background: white;
 }
 
-/* error message home-page */
+/* error message */
 
 .errorMes {
     font-weight: bold;

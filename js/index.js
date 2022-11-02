@@ -8,6 +8,8 @@ const options = {
 const url = "https://api.thedogapi.com/v1/breeds/";
 
 const resultsContainer = document.querySelector(".results");
+const footer = document.querySelector("footer");
+footer.style.backgroundColor = "white";
 
 async function callApi() {
     try{
@@ -17,6 +19,8 @@ async function callApi() {
     
         setTimeout(function () {
             resultsContainer.innerHTML = "";
+            footer.style.backgroundColor = "#749e83";
+
     
             for (let i = 0; i < json.length; i++) {
                 resultsContainer.innerHTML += `<a href="details.html?id=${json[i].id}"class="card">

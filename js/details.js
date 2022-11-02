@@ -1,4 +1,9 @@
+// Find elements
 const resultsContainer = document.querySelector(".container");
+const footer = document.querySelector("footer");
+footer.style.backgroundColor = "white";
+
+// Get id
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -22,6 +27,7 @@ async function getDetails() {
     
         setTimeout(function () {
             resultsContainer.innerHTML = "";
+            footer.style.backgroundColor = "#749e83";
     
             const image = details.reference_image_id;
 
