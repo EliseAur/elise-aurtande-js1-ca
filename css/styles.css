@@ -19,13 +19,8 @@ h3,
     margin: 0 0 10px 0;
 }
 
+
 /* Navigation and menu */
-
-/*
-
-.menu, .card, form
-background-color: #00800017;
-*/
 .menu {
     background-color: #00800017;
     text-align: center;
@@ -110,7 +105,7 @@ footer {
     border: 4px solid #00800000;
 }
 
-/*Contact page */
+/* Contact page */
 form {
     padding: 2em;
     border-radius: 10px;
@@ -211,7 +206,6 @@ button:hover {
     from {transform: rotate(0turn)}
     to {transform: rotate(1turn)}
 }
-
 
 
 /* Media */
