@@ -29,7 +29,7 @@ async function callApi() {
                                                     <div class="image" style="background-image: url('${json[i].image.url}')")></div>
                                                 </a>`;
             }
-        }, 3000);
+        }, 3500);
 
     } catch(error) {
         setTimeout(function () {

@@ -1,7 +1,6 @@
-:root {
-    --font-size-text: 1.2em;
+* {
+    box-sizing: border-box;
 }
-
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -22,16 +21,19 @@ h3,
 
 /* Navigation and menu */
 
+/*
+
+.menu, .card, form
+background-color: #00800017;
+*/
 .menu {
     background-color: #00800017;
-    max-width: 100%;
     text-align: center;
     padding-top: 20px;
 }
 
 nav {
     margin-top: 20px;
-    max-width: 100%;
     padding: 10px;
     background: #749e83;
 }
@@ -41,7 +43,6 @@ nav a, button, .errorMes a {
     background: black;
     font-weight: bold;
     display: inline-block;
-    margin: 5px;
     padding: 8px 40px;
     border-radius: 5px;
     text-decoration: none;
@@ -52,10 +53,9 @@ nav a:hover {
     background: white;
 }
 
-.footer {
-    height: 40px;
+footer {
+    height: 60px;
     background: #749e83;
-    margin-top: 20px;
 }
 
 /*Home*/
@@ -63,8 +63,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     max-width: 420px;
-    margin: auto;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 
 .results a {
@@ -80,7 +79,6 @@ nav a:hover {
     padding: 20px;
     list-style: none;
     width: 400px;
-    box-sizing: border-box;
 }
 
 .card:hover {
@@ -113,12 +111,10 @@ nav a:hover {
 }
 
 /*Contact page */
-
 form {
     padding: 2em;
     border-radius: 10px;
     background-color: #00800017;
-    box-sizing: border-box;
     border: 4px solid #00800000;
 }
 
@@ -138,10 +134,8 @@ label, .form-error {
 }
 
 input {
-    display: block;
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;
     font-size: 1em;
     border-radius: 6px;
     border:0.1rem solid grey;
@@ -172,8 +166,7 @@ button:hover {
     background: white;
 }
 
-/* error message */
-
+/* Error Message */
 .errorMes {
     font-weight: bold;
     display: block;
@@ -217,16 +210,11 @@ button:hover {
 @keyframes spin {
     from {transform: rotate(0turn)}
     to {transform: rotate(1turn)}
-    /* 0% {
-        tranform: (0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    } */
 }
 
-/* Media */
 
+
+/* Media */
 @media (min-width: 841px) {
     .results {
         max-width: 840px;
